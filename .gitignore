@@ -1,0 +1,6 @@
+*.o
+*.out
+*.md
+.exercism
+test-framework/
+*working

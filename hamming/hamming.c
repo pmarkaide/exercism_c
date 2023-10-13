@@ -4,18 +4,14 @@
 int compute(const char *lhs, const char *rhs)
 {
 	int h = 0;
-	int lhs_len =	strlen(lhs);
-	int rhs_len =	strlen(rhs);
-
-	if (lhs_len != rhs_len)
+	if (strlen(lhs) != strlen(rhs))
 		return -1;
-	
-	while (*lhs)
-	{
-		if(*lhs != *rhs)
-			h++;
-		lhs++;
-		rhs++;
-	}
-	return h;
+
+    while (*lhs)
+    {
+        if (*lhs++ != *rhs++)
+            h++;
+    }
+
+    return h;
 }
